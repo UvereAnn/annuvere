@@ -264,6 +264,9 @@ function handleResponse(response) {
   if (response === "success") {
     successMessage.innerHTML = "Message sent successfully!";
     successMessage.classList.add("success");
+    setTimeout(function () {
+      $(".success-message").slideUp();
+    }, 2000);
     document.getElementById("myForm").reset();
   } else {
     successMessage.innerHTML = "Failed to send message. Please try again.";
