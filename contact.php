@@ -68,6 +68,14 @@ if ($conn->connect_error) {
 $sql = "INSERT INTO `contact_form` (`name`, `email`, `message`) VALUES ('$name', '$email', '$message')";
 
 if ($conn->query($sql) === TRUE) {
+    /*// Send email 
+    $to = "annuvere@gmail.com";
+    $subject = "New Form Submission from Ann Tech";
+    $message = "Name: $name \nEmail: $email \nMessage: $message";
+    $headers = "From: contact@uvereann.name.ng";
+
+    mail($to, $subject, $message, $headers);*/
+
     echo json_encode(['success' => true, 'message' => 'Form submitted successfully!']);
 } else {
     http_response_code(500);

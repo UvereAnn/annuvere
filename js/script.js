@@ -322,6 +322,6 @@ function displayResult(response) {
     setTimeout(function () {
       errorMessage.style.display = "none";
     }, 3000);
-    document.getElementById("myForm").reset();
+    //document.getElementById("myForm").reset();
   }
 }
