@@ -688,6 +688,7 @@ section {
   color: rgb(213, 211, 211);
 }
 
+/*
 .success-message {
   margin-top: 10px;
   padding: 10px;
@@ -705,6 +706,28 @@ section {
 
 .error {
   color: red;
+}*/
+
+.success-message {
+  background-color: #4caf50;
+  color: #ffffff;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 2rem;
+  display: block;
+  text-align: center;
+}
+
+.error-message {
+  background-color: var(--red);
+  color: #ffffff;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 2rem;
+  display: block;
+  text-align: center;
 }
 
 /*

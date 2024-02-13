@@ -235,7 +235,7 @@ displayPage(currentPage);
 updatePagination();
 
 /***********************Contact form**********************************/
-function submitForm() {
+/*function submitForm() {
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const message = document.getElementById("message").value;
@@ -271,5 +271,57 @@ function handleResponse(response) {
   } else {
     successMessage.innerHTML = "Failed to send message. Please try again.";
     successMessage.classList.remove("success");
+  }
+}*/
+
+function submitForm() {
+  var formData = {
+    name: document.getElementById("name").value.toLowerCase().trim(),
+    email: document.getElementById("email").value.toLowerCase().trim(),
+    message: document.getElementById("message").value.toLowerCase().trim(),
+  };
+
+  // Use AJAX to send the data to the server
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "contact.php", true);
+  xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+
+  xhr.onload = function () {
+    if (xhr.status === 200) {
+      var response = JSON.parse(xhr.responseText);
+      displayResult(response);
+    } else {
+      displayResult({
+        error: "Error submitting the form. Incorrect input!!",
+      });
+    }
+  };
+
+  xhr.send(JSON.stringify(formData));
+}
+
+function displayResult(response) {
+  var successMessage = document.getElementById("successMessage");
+  var errorMessage = document.getElementById("errorMessage");
+
+  successMessage.style.display = "none";
+  errorMessage.style.display = "none";
+
+  if (response.success) {
+    successMessage.innerHTML = response.message;
+    successMessage.style.display = "block";
+    // Automatically hide the success message after 2 seconds
+    setTimeout(function () {
+      successMessage.style.display = "none";
+    }, 3000);
+    document.getElementById("myForm").reset();
+  } else {
+    errorMessage.innerHTML = response.error;
+    errorMessage.style.display = "block";
+    // Automatically hide the error message after 2 seconds
+    setTimeout(function () {
+      errorMessage.style.display = "none";
+    }, 3000);
+    document.getElementById("myForm").reset();
   }
 }

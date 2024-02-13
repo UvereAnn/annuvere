@@ -1674,7 +1674,17 @@
         </div>
 
         <form name="contact" id="myForm">
-          <div id="successMessage" class="success-message"></div>
+          <!--<div id="successMessage" class="success-message"></div>-->
+          <div
+            id="successMessage"
+            class="success-message"
+            style="display: none"
+          ></div>
+          <div
+            id="errorMessage"
+            class="error-message"
+            style="display: none"
+          ></div>
 
           <input
             type="text"
@@ -1710,6 +1720,30 @@
             Send <i class="fas fa-paper-plane"></i>
           </button>
         </form>
+        <!--
+        <form id="userForm">
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" name="firstName" required />
+
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" name="lastName" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <button type="button" onclick="submitForm()">Submit</button>
+
+          <div
+            id="successMessage"
+            class="success-message"
+            style="display: none"
+          ></div>
+          <div
+            id="errorMessage"
+            class="error-message"
+            style="display: none"
+          ></div>
+        </form>-->
       </div>
     </section>
     <!--Contact Section Ends-->
