@@ -1,6 +1,7 @@
 :root {
   --red: #ed0707;
   --blue: #0d4794;
+  --shades: #b6d0e2;
 }
 
 * {
@@ -22,6 +23,7 @@
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  filter: contrast(-10);
 }
 
 html::-webkit-scrollbar {
@@ -37,7 +39,6 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-  background: rgb(222, 221, 221);
   overflow-x: hidden;
   padding-left: 35rem;
 }
@@ -63,9 +64,8 @@ body {
 }*/
 
 .heading-desc {
-  font-size: 1.5rem;
-  text-align: center;
-  padding: 1em 2em 2em 2em;
+  font-size: 2rem;
+  padding: 1em 0em 2em 0em;
   margin: 0 2rem 1rem 0;
 }
 
@@ -85,7 +85,7 @@ p.post {
 
 .btn i {
   padding: 0 0.5rem;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 .btn:hover {
@@ -99,7 +99,7 @@ p.post {
 .heading {
   text-align: center;
   margin: 0 6rem;
-  font-size: 3rem;
+  font-size: 4rem;
   padding: 1rem;
   border-bottom: 0.1rem solid var(--blue);
   color: #333;
@@ -116,7 +116,7 @@ header {
   z-index: 1000;
   height: 100%;
   width: 35rem;
-  background: #ffffff;
+  background: var(--shades);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -135,12 +135,12 @@ header .user img {
 }
 
 header .user .name {
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: #000;
 }
 
 header .user .post {
-  font-size: 1.4rem;
+  font-size: 2rem;
   color: #000;
 }
 
@@ -159,7 +159,7 @@ header .navbar ul li a {
   margin: 0.5rem 0;
   background: var(--blue);
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 2rem;
   border-radius: 5rem;
 }
 
@@ -227,7 +227,6 @@ section {
   font-size: 2rem;
   color: #000;
   padding: 1rem 0;
-  text-align: justify;
 }
 
 .socialMediaLinks {
@@ -235,15 +234,12 @@ section {
 }
 
 .socialMediaLinks a {
-  font-size: 26px;
+  font-size: 3rem;
   margin: 0 10px 0 0;
   color: #000000;
   text-decoration: none;
   background: white;
-  padding: 10px;
-  width: 50px;
   text-align: center;
-  border-radius: 100%;
 }
 
 .socialMediaLinks a:hover {
@@ -335,17 +331,16 @@ section {
 /*******Skills section******/
 .skill-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: start;
+  align-items: start;
+  text-align: start;
   grid-gap: 1rem;
-  padding: 1rem 3em;
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 
 .skill-box {
-  padding: 1rem;
+  padding: 0rem;
   color: #ddd;
   cursor: pointer;
 }
@@ -361,14 +356,14 @@ section {
 
 .skill-box p {
   color: #000;
-  text-align: center;
+  text-align: start;
 }
 
 .skill-title {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 0.5rem;
+  align-items: start;
+  padding: 0.5rem 0.5rem 0.5rem 0rem;
   margin-bottom: 0.5rem;
   position: relative;
 }
@@ -377,25 +372,25 @@ section {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 50%;
+  left: 0%;
   width: 35px;
   height: 4px;
   border-radius: 0 2px 2px 0;
   background-color: var(--blue);
   transition: 0.5s;
 }
-
+/*
 .skill-title:before {
   content: "";
   position: absolute;
   bottom: 0;
-  right: 50%;
+  right: 80%;
   width: 35px;
   height: 4px;
   border-radius: 2px 0 0 2px;
   background-color: var(--blue);
   transition: 0.5s;
-}
+}*/
 
 .skill-img {
   width: 90px;
@@ -404,7 +399,7 @@ section {
   border-radius: 45px;
   background-color: #fff;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   transition: 0.5s;
 }
@@ -435,14 +430,14 @@ section {
 }
 
 /***Experience starts ******/
-#experience {
+/*#experience {
   padding: 0px 0;
 }
 
 #experience h2 {
   text-align: center;
   margin-bottom: 40px;
-}
+}*/
 
 .timeline {
   display: flex;
@@ -452,7 +447,7 @@ section {
 }
 
 .timeline-item {
-  width: 30%;
+  width: 33%;
   position: relative;
   margin-bottom: 20px;
 }
@@ -464,11 +459,15 @@ section {
   box-shadow: 0 0 10px #d9d9d9;
   flex-basis: 70%;
   margin-right: 20px;
-  font-size: 1.3em;
 }
 
-.timeline-content h4 {
+.timeline-content h6 {
+  font-size: 2rem;
+}
+
+.timeline-content p {
   color: var(--red);
+  font-size: 1.8rem;
 }
 
 .timeline-image {
@@ -488,7 +487,7 @@ section {
 
 .timeline-date {
   font-style: italic;
-  font-size: 1.1em;
+  font-size: 1.8em;
   color: #615f5f;
   margin-bottom: 10px;
 }
@@ -509,12 +508,12 @@ section {
 
 .grid-a a:nth-child(2) {
   color: var(--blue);
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 #project-link {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 /* Certifications section styles */
@@ -561,12 +560,10 @@ section {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding: 1rem;
-  padding-left: 3rem;
 }
 
 .education .box-container .box {
-  width: 20rem;
+  width: 33rem;
   margin: 1rem 1rem;
   padding-left: 4rem;
   border-left: 0.2rem solid #333;
@@ -574,7 +571,7 @@ section {
 }
 
 .education .box-container .box span {
-  font-size: 1.3rem;
+  font-size: 2rem;
   background: var(--blue);
   color: #fff;
   border-radius: 5rem;
@@ -582,13 +579,13 @@ section {
 }
 
 .education .box-container .box h3 {
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: #333;
   padding-top: 1.5rem;
 }
 
 .education .box-container .box p {
-  font-size: 1.4rem;
+  font-size: 2rem;
   color: #333;
   padding: 1rem;
 }
@@ -617,7 +614,7 @@ section {
 
 .contact .row .content {
   flex: 1 1 30rem;
-  padding: 4rem;
+  padding: 0rem;
   padding-bottom: 0;
 }
 
@@ -634,8 +631,9 @@ section {
   background: #ffffff;
   color: #333;
   text-transform: none;
-  font-size: 1.7rem;
+  font-size: 2rem;
   width: 100%;
+  border: 1px solid #858181;
 }
 
 .contact .row form .box::placeholder {
@@ -793,7 +791,7 @@ section {
   border: 1px solid #ccc;
   border-radius: 5px 5px 0 0;
   color: #ffffff;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .tab:hover {
@@ -809,8 +807,9 @@ section {
   width: 100%;
 }
 
-.tab-content p {
-  font-size: 1.4rem;
+.tab-content p,
+h2 {
+  font-size: 2rem;
 }
 
 .tab-content.active {
@@ -872,7 +871,7 @@ section {
 
 .card h3 {
   margin-top: 10px;
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-transform: capitalize;
 }
 
@@ -887,25 +886,25 @@ section {
 }*/
 
 .card p {
-  font-size: 1.4rem;
+  font-size: 2rem;
 }
 
 #page-numbers {
   margin-top: 20px;
-  font-size: 16px;
+  font-size: 3rem;
 }
 
 /**copyright**/
 .copyright {
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 
 /***************************************MEDIA QUERIES********************************************/
 
 @media (max-width: 1200px) {
   html {
-    font-size: 55%;
+    font-size: 60%;
     overflow-x: hidden;
   }
 
@@ -949,12 +948,7 @@ section {
   }
 
   .skill-container {
-    grid-template-columns: repeat(3, 1fr);
-    padding: 2rem 50px;
-  }
-
-  .skill-box p {
-    text-align: center;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   /**pagination*/
@@ -965,7 +959,7 @@ section {
 
 @media (max-width: 768px) {
   header {
-    font-size: 50%;
+    font-size: 60%;
   }
 
   .portfolio .box-container .box {
@@ -975,7 +969,7 @@ section {
 
   .portfolio-description {
     margin: 2px 0px 5px 0px;
-    font-size: 20px;
+    font-size: 2rem;
     text-align: start;
   }
 
@@ -987,7 +981,7 @@ section {
 
   .portfolio-description-two {
     margin: 10px 2px 60px 2px;
-    font-size: 20px;
+    font-size: 2rem;
   }
 
   #box-container-two {
@@ -1013,6 +1007,10 @@ section {
   .tabs {
     flex-direction: column;
   }
+
+  #edu-heading {
+    font-size: 3rem;
+  }
 }
 
 @media (max-width: 700px) {
@@ -1030,34 +1028,34 @@ section {
 
   .heading {
     margin: 0 2rem;
+    font-size: 3rem;
+  }
+
+  /*
+  .heading-desc {
+    margin: 0 -2em;
+  }*/
+
+  #hi-there {
     font-size: 2rem;
   }
 
-  .heading-desc {
-    margin: 0 -2em;
-  }
-
-  #hi-there {
-    font-size: 1.2em;
-  }
-
   #im {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
+  /*
   .about .row .info {
     text-align: justify;
-  }
+  }*/
 
   .about .row .info h3 {
     font-size: 2rem;
     padding: 1rem 0;
-    text-align: justify;
   }
 
   .about .row .info h3 span {
     padding: 0 0.1rem;
-    text-align: justify;
   }
 
   .socialMediaLinks {
@@ -1076,12 +1074,12 @@ section {
     margin-bottom: 0.5em;
   }
 
-  #edu-heading {
+  /*
+edu-heading {
     text-align: center;
-    margin-top: -7em;
     padding: 0 2em;
-    font-size: 2em;
-  }
+    font-size: 4em;
+  }*/
 
   .blog h1 {
     margin-top: -70px;
@@ -1092,27 +1090,12 @@ section {
   }
 
   .skill-container {
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-  }
-
-  .skill-box p {
-    text-align: center;
-  }
-
-  .skill-img img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .skill-container {
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 0.2em;
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .education h1 {
-    margin: 0 -2rem;
-    font-size: 2rem;
+    margin: -10rem -2rem 0 -2rem;
+    font-size: 4rem;
   }
 
   .education .box-container .box {
@@ -1120,7 +1103,7 @@ section {
   }
 
   .education .box-container .box h3 {
-    font-size: 1.4em;
+    font-size: 2em;
   }
 
   .projects-grid {
@@ -1150,11 +1133,6 @@ section {
   /****success mesage****/
 
   @media (max-width: 400px) {
-    .skill-container {
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 0.2em;
-    }
-
     .btn {
       padding: 0.7rem 2rem;
       margin-top: 1rem;
@@ -1164,7 +1142,7 @@ section {
 
     .btn i {
       padding: 0 0.5rem;
-      font-size: 1.8rem;
+      font-size: 2rem;
     }
     /**pagination*/
     .card-container {
@@ -1192,9 +1170,14 @@ section {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .timeline-item {
-    width: 40%;
-    margin-left: 2rem;
+    width: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  .timeline-item {
+    width: 100%;
   }
 }
