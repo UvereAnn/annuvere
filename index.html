@@ -14,6 +14,7 @@
     />
     <meta name="keywords" content="HTML, CSS, JavaScript, PHP, MySQL" />
     <meta name="author" content="Ann Uvere" />
+    <meta name="theme-color" content="#317EFB" />
     <title>My Portfolio Website</title>
     <link rel="icon" href="images/favicon.png" type="image/icon type" />
 
@@ -21,6 +22,7 @@
     <script src="js/bootstrap.js"></script>
     <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="manifest" href="manifest.json" />
   </head>
   <body>
     <!--Header Section Starts-->
@@ -1812,5 +1814,20 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("/service-worker.js")
+          .then((registration) => {
+            console.log(
+              "Service Worker registered with scope:",
+              registration.scope
+            );
+          })
+          .catch((error) => {
+            console.error("Service Worker registration failed:", error);
+          });
+      }
+    </script>
   </body>
 </html>

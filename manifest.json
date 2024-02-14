@@ -1,0 +1,25 @@
+{
+    "name": "Ann Uvere Portfolio",
+    "short_name": "AnnUvere",
+    "description": "This is my portfolio website that showcases all about me and my works",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "purpose":"any",
+    "theme_color": "#317EFB",
+    "icons": [
+      {
+        "src": "images/logo.png",
+        "sizes": "144x144",
+        "type": "image/png",
+        "purpose": "maskable"
+      },
+      {
+        "src": "images/AnnUvere logo.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+      }
+    ]
+  }
+  
