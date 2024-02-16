@@ -27,10 +27,6 @@ $(document).ready(function () {
       "linear"
     );
   });
-
-  ".submit-btn".click(function () {
-    $(this).alert("Submission Successful!  We Have Sent You an Email.");
-  });
 });
 
 /*****Typewriter effect********/
@@ -92,64 +88,6 @@ window.onload = function () {
   css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
   document.body.appendChild(css);
 };
-
-// Contact form
-const form = document.querySelector("form");
-
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  const nameInput = document.querySelector("#name");
-  const emailInput = document.querySelector("#email");
-  const messageInput = document.querySelector("#message");
-  const messageText = document.querySelector("#message_text");
-
-  // Validate name input
-  if (nameInput.value.trim() === "") {
-    messageText.innerHTML = "!!!!Please fill your name!!!!";
-    nameInput.focus();
-    return;
-  }
-
-  // Validate email input
-  if (emailInput.value.trim() === "") {
-    messageText.innerHTML = "!!!!Please fill your email!!!!";
-    emailInput.focus();
-    return;
-  }
-
-  // Validate message input
-  if (messageInput.value.trim() === "") {
-    messageText.innerHTML = "!!!!Please leave a message for me!!!!";
-    messageInput.focus();
-    return;
-  }
-
-  // Submit form
-  form.submit();
-  //messageText.innerHTML =
-  //"Thank you for submitting the form! Please check your email";
-});
-
-/**document.getElementById("combined").onclick = function() {
-  
-    document.getElementById("box-container-one").style.display = "none";
-    document.getElementById("box-container-two").style.display = "block";
-
-}**/
-
-/*****Skills tab */
-/*function showContent(contentId) {
-  // Hide all tab contents
-  var tabContents = document.querySelectorAll(".tab-content");
-  tabContents.forEach(function (content) {
-    content.classList.remove("active");
-  });
-
-  // Show the selected tab content
-  document.getElementById(contentId).classList.add("active");
-}
-*/
 
 function showTab(tabId) {
   var tabContents = document.getElementsByClassName("tab-content");
@@ -234,45 +172,24 @@ pageLinks.forEach((link) => {
 displayPage(currentPage);
 updatePagination();
 
-/***********************Contact form**********************************/
-/*function submitForm() {
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
+/************************************Header***************************/
+// Get the header element
+var header = document.getElementById("header");
 
-  const data = {
-    name: name,
-    email: email,
-    message: message,
-  };
-
-  // Send data to the server using AJAX
-  const xhr = new XMLHttpRequest();
-  xhr.open("POST", "contact.php", true);
-  xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      handleResponse(xhr.responseText);
-    }
-  };
-  xhr.send(JSON.stringify(data));
+// Function to add or remove the 'sticky' class based on the scroll position
+function toggleSticky() {
+  if (window.scrollY > 0) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
 }
 
-function handleResponse(response) {
-  const successMessage = document.getElementById("successMessage");
+// Attach the function to the scroll event
+window.addEventListener("scroll", toggleSticky);
+/************************************Header ends***************************/
 
-  if (response === "success") {
-    successMessage.innerHTML = "Message sent successfully!";
-    successMessage.classList.add("success");
-    setTimeout(function () {
-      $(".success-message").slideUp();
-    }, 2000);
-    document.getElementById("myForm").reset();
-  } else {
-    successMessage.innerHTML = "Failed to send message. Please try again.";
-    successMessage.classList.remove("success");
-  }
-}*/
+/***********************Contact form**********************************/
 
 function submitForm() {
   var formData = {

@@ -967,7 +967,8 @@ a:active {
 
   #menu {
     display: block;
-    right: 3rem;
+    font-size: 4rem;
+    left: 40%;
   }
 
   header.toggle {
@@ -1001,6 +1002,33 @@ a:active {
   /**pagination*/
   .card-container {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Define styles for the header */
+  #header {
+    background-color: var(--shades);
+    color: #fff;
+    padding: 10px;
+    height: 100px;
+    margin: 0px -33px;
+    text-align: center;
+  }
+
+  /* Apply sticky behavior to the header */
+  #header,
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .home-container {
+    margin-top: 20em;
+  }
+
+  .user {
+    margin-top: 10rem;
   }
 }
 
@@ -1200,8 +1228,9 @@ edu-heading {
 
 @media (max-width: 990px) {
   #logo {
-    width: 10em;
-    height: 10em;
+    width: 15em;
+    height: 15em;
+    margin-top: -1rem;
   }
 }
 
